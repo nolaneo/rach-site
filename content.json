@@ -1,0 +1,86 @@
+{
+  "name": "Rachel Sargent",
+  "role": "Editor · Writer",
+  "tagline": "Shaping books, sentence by sentence.",
+  "intro": "I'm a book editor and writer based in London. For the past decade I've worked closely with authors to shape manuscripts into finished books — from the first messy draft to the final proof. I care about clarity, voice, and the quiet architecture that holds a story together.",
+  "bio": "Across fiction and narrative non-fiction, I've had the privilege of editing debut novelists and established voices alike. When I'm not editing, I write essays and criticism on books, language, and the craft of publishing.",
+  "email": "hello@example.com",
+  "social": [
+    { "label": "Email", "href": "mailto:hello@example.com" },
+    { "label": "Bluesky", "href": "#" },
+    { "label": "Instagram", "href": "#" }
+  ],
+  "books": [
+    {
+      "title": "The Salt Path Home",
+      "author": "Placeholder Author",
+      "year": 2024,
+      "role": "Editor",
+      "cover": "images/covers/book-1.svg",
+      "link": ""
+    },
+    {
+      "title": "A Quiet Inheritance",
+      "author": "Placeholder Author",
+      "year": 2023,
+      "role": "Editor",
+      "cover": "images/covers/book-2.svg",
+      "link": ""
+    },
+    {
+      "title": "Northlight",
+      "author": "Placeholder Author",
+      "year": 2023,
+      "role": "Editor",
+      "cover": "images/covers/book-3.svg",
+      "link": ""
+    },
+    {
+      "title": "The Weight of Small Things",
+      "author": "Placeholder Author",
+      "year": 2022,
+      "role": "Editor",
+      "cover": "images/covers/book-4.svg",
+      "link": ""
+    },
+    {
+      "title": "Field Notes for the End of Summer",
+      "author": "Placeholder Author",
+      "year": 2022,
+      "role": "Editor",
+      "cover": "images/covers/book-5.svg",
+      "link": ""
+    },
+    {
+      "title": "Everything Was a River",
+      "author": "Placeholder Author",
+      "year": 2021,
+      "role": "Editor",
+      "cover": "images/covers/book-6.svg",
+      "link": ""
+    }
+  ],
+  "writing": [
+    {
+      "title": "On the Art of the Invisible Edit",
+      "publication": "The Literary Review",
+      "year": 2024,
+      "link": "#",
+      "excerpt": "What it means to shape a book without leaving fingerprints on the prose."
+    },
+    {
+      "title": "Reading Slowly in a Fast Year",
+      "publication": "Essays &c.",
+      "year": 2023,
+      "link": "#",
+      "excerpt": "A case for the long, unhurried read in an age of the scroll."
+    },
+    {
+      "title": "The Second Draft Is Where the Book Begins",
+      "publication": "Craft Notebook",
+      "year": 2023,
+      "link": "#",
+      "excerpt": "Why the real writing so often starts once the first draft is done."
+    }
+  ]
+}

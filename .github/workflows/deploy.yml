@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+# Publishes the site whenever content is pushed to the main branch.
+# It's a static site (no build step), so we just upload the files as-is.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # lets you trigger a deploy manually from the Actions tab
+
+# Allow the workflow to publish to Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only run one deploy at a time; don't cancel an in-progress one
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: . # upload the whole repository (it's already a static site)
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachel Sargent — Editor & Writer</title>
+  <meta name="description" content="Rachel Sargent is a book editor and writer. A selection of books she has edited, and pieces she has written." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rachel Sargent — Editor & Writer" />
+  <meta property="og:description" content="A book editor and writer. A selection of books edited, and pieces written." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: "#FAF6EF",
+            paper2: "#F3ECE0",
+            ink: "#211C17",
+            muted: "#6B6154",
+            oxblood: "#7C2B2B",
+            line: "#DBD2C4"
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            body: ['Newsreader', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-paper text-ink font-body antialiased selection:bg-oxblood selection:text-paper">
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-30 bg-paper/85 backdrop-blur-sm border-b border-line">
+    <div class="mx-auto max-w-6xl px-6 md:px-10 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display text-lg md:text-xl tracking-tight">Rachel&nbsp;Sargent</a>
+      <nav class="flex items-center gap-6 md:gap-9 text-sm tracking-wide">
+        <a href="#books" class="nav-link">Books</a>
+        <a href="#writing" class="nav-link">Writing</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero / Intro -->
+    <section class="mx-auto max-w-6xl px-6 md:px-10 pt-16 md:pt-28 pb-16 md:pb-24">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-end">
+        <div class="md:col-span-8 reveal">
+          <p class="text-oxblood tracking-[0.25em] uppercase text-xs mb-6" data-field="role">Editor · Writer</p>
+          <h1 class="font-display font-light leading-[1.02] text-5xl sm:text-6xl md:text-7xl tracking-[-0.02em]">
+            <span data-field="tagline">Shaping books, sentence by sentence.</span>
+          </h1>
+        </div>
+        <div class="md:col-span-4 reveal" style="--d:120ms">
+          <div class="portrait aspect-[4/5] rounded-sm overflow-hidden border border-line bg-paper2">
+            <img src="images/portrait.svg" alt="Portrait of Rachel Sargent" class="h-full w-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 md:mt-20 grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-7 md:col-start-1 reveal" style="--d:200ms">
+          <p class="dropcap font-body text-xl md:text-2xl leading-relaxed text-ink/90" data-field="intro"></p>
+          <p class="mt-6 text-lg leading-relaxed text-muted" data-field="bio"></p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="mx-auto max-w-6xl border-line" />
+
+    <!-- Books -->
+    <section id="books" class="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-24 scroll-mt-20">
+      <div class="flex items-baseline justify-between gap-6 mb-10 md:mb-14">
+        <h2 class="section-title">Selected Books</h2>
+        <span class="text-muted text-sm tracking-wide">As editor</span>
+      </div>
+      <ul id="books-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-10 md:gap-y-16">
+        <!-- injected by js/main.js -->
+      </ul>
+    </section>
+
+    <hr class="mx-auto max-w-6xl border-line" />
+
+    <!-- Writing -->
+    <section id="writing" class="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-24 scroll-mt-20">
+      <div class="flex items-baseline justify-between gap-6 mb-10 md:mb-14">
+        <h2 class="section-title">Pieces I've Written</h2>
+        <span class="text-muted text-sm tracking-wide">Essays &amp; criticism</span>
+      </div>
+      <ul id="writing-list" class="border-t border-line">
+        <!-- injected by js/main.js -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" class="bg-paper2 border-t border-line scroll-mt-20">
+    <div class="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-24">
+      <div class="grid md:grid-cols-12 gap-10 items-end">
+        <div class="md:col-span-8">
+          <h2 class="font-display font-light text-4xl md:text-5xl tracking-[-0.02em] leading-tight">
+            Working on something?<br />I'd love to hear about it.
+          </h2>
+          <a id="contact-email" href="#" class="inline-block mt-8 font-display text-2xl md:text-3xl text-oxblood underline decoration-line decoration-1 underline-offset-8 hover:decoration-oxblood transition-colors"></a>
+        </div>
+        <div class="md:col-span-4 md:text-right">
+          <ul id="social-list" class="flex md:justify-end gap-6 text-sm tracking-wide"></ul>
+        </div>
+      </div>
+      <p class="mt-16 text-xs text-muted tracking-wide">© <span id="year"></span> Rachel Sargent. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
