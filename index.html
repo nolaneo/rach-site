@@ -42,6 +42,13 @@
 <body class="bg-paper text-ink font-body antialiased selection:bg-accent selection:text-paper">
   <div class="grain" aria-hidden="true"></div>
 
+  <!-- Header (non-sticky) -->
+  <header class="border-b border-line">
+    <div class="mx-auto max-w-6xl px-6 md:px-10 py-9 md:py-12">
+      <h1 class="font-display font-light text-center uppercase tracking-[0.3em] text-xl md:text-3xl leading-none reveal" data-field="name">Rachel Sargent</h1>
+    </div>
+  </header>
+
   <main id="top">
     <!-- Hero / Intro -->
     <section class="mx-auto max-w-6xl px-6 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24">
@@ -49,8 +56,7 @@
         <div class="portrait shrink-0 w-24 sm:w-28 md:w-32 aspect-square rounded-full overflow-hidden border border-line bg-paper2 reveal" style="--d:120ms">
           <img src="images/portrait.svg" alt="Portrait of Rachel Sargent" class="h-full w-full object-cover" />
         </div>
-        <div class="reveal">
-          <h1 class="font-display font-light text-4xl md:text-5xl tracking-[-0.02em] leading-tight mb-5" data-field="name">Rachel Sargent</h1>
+        <div class="reveal" style="--d:200ms">
           <p class="font-body text-xl md:text-2xl leading-relaxed text-ink max-w-2xl" data-field="intro"></p>
         </div>
       </div>
