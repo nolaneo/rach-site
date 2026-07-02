@@ -40,15 +40,13 @@ punctuation, so keep these three rules in mind:
 Near the top of `content.json` you'll see:
 
 ```json
-"tagline": "Shaping books, sentence by sentence.",
+"role": "Editor · Writer",
 "intro": "I'm a book editor and writer based in London...",
-"bio": "Across fiction and narrative non-fiction...",
 "email": "hello@example.com",
 ```
 
-- **tagline** — the big line at the top of the page.
-- **intro** — the main introduction paragraph.
-- **bio** — the smaller paragraph underneath.
+- **role** — the small line above your introduction.
+- **intro** — your introduction paragraph.
 - **email** — where the "Contact" button points.
 
 Just replace the text between the quotes.

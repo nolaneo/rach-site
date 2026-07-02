@@ -52,17 +52,6 @@ html, body { -webkit-font-smoothing: antialiased; }
   line-height: 1.05;
 }
 
-/* Drop cap on the intro paragraph */
-.dropcap::first-letter {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 400;
-  float: left;
-  font-size: 3.4em;
-  line-height: 0.72;
-  padding: 0.05em 0.12em 0 0;
-  color: var(--oxblood);
-}
-
 /* Portrait tint */
 .portrait { box-shadow: 0 30px 60px -40px rgba(33, 28, 23, 0.55); }
 

@@ -32,9 +32,7 @@ function renderBio(data) {
     });
   };
   set("role", data.role);
-  set("tagline", data.tagline);
   set("intro", data.intro);
-  set("bio", data.bio);
 
   // Contact email
   const emailEl = document.getElementById("contact-email");
