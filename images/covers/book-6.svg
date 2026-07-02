@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="Everything Was a River">
-  <rect width="400" height="600" fill="#EFE7D9"/>
-  <rect x="18" y="18" width="364" height="564" fill="none" stroke="#3E5C6E" stroke-width="1"/>
-  <path d="M40 190 q90 -40 180 0 t180 0" fill="none" stroke="#3E5C6E" stroke-width="1.2"/>
-  <path d="M40 210 q90 -40 180 0 t180 0" fill="none" stroke="#3E5C6E" stroke-width="1.2" opacity="0.6"/>
-  <text x="200" y="360" text-anchor="middle" fill="#211C17" font-family="Georgia, serif" font-style="italic" font-size="28">Everything</text>
-  <text x="200" y="396" text-anchor="middle" fill="#211C17" font-family="Georgia, serif" font-style="italic" font-size="28">Was a River</text>
-  <text x="200" y="510" text-anchor="middle" fill="#3E5C6E" font-family="Georgia, serif" font-size="15" letter-spacing="3">PLACEHOLDER AUTHOR</text>
+  <rect width="400" height="600" fill="#E7E7E5"/>
+  <rect x="18" y="18" width="364" height="564" fill="none" stroke="#6E6E6C" stroke-width="1"/>
+  <path d="M40 190 q90 -40 180 0 t180 0" fill="none" stroke="#6E6E6C" stroke-width="1.2"/>
+  <path d="M40 210 q90 -40 180 0 t180 0" fill="none" stroke="#6E6E6C" stroke-width="1.2" opacity="0.55"/>
+  <text x="200" y="360" text-anchor="middle" fill="#1C1C1B" font-family="Georgia, serif" font-style="italic" font-size="28">Everything</text>
+  <text x="200" y="396" text-anchor="middle" fill="#1C1C1B" font-family="Georgia, serif" font-style="italic" font-size="28">Was a River</text>
+  <text x="200" y="510" text-anchor="middle" fill="#6E6E6C" font-family="Georgia, serif" font-size="15" letter-spacing="3">PLACEHOLDER AUTHOR</text>
 </svg>

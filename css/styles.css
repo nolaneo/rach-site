@@ -4,8 +4,8 @@
    ------------------------------------------------------------------ */
 
 :root {
-  --oxblood: #7C2B2B;
-  --line: #DBD2C4;
+  --accent: #3D3D3C;
+  --line: #DEDEDC;
 }
 
 html, body { -webkit-font-smoothing: antialiased; }
@@ -26,9 +26,10 @@ html, body { -webkit-font-smoothing: antialiased; }
 /* Nav links with a fine animated underline */
 .nav-link {
   position: relative;
-  color: var(--oxblood);
+  color: var(--muted, #6E6E6C);
   padding-bottom: 2px;
 }
+.nav-link:hover { color: var(--accent); }
 .nav-link::after {
   content: "";
   position: absolute;
@@ -63,7 +64,7 @@ html, body { -webkit-font-smoothing: antialiased; }
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 2px;
-  background: #F3ECE0;
+  background: #ECEBEA;
   box-shadow: 0 20px 40px -30px rgba(33, 28, 23, 0.6);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);

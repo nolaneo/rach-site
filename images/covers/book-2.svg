@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="A Quiet Inheritance">
-  <rect width="400" height="600" fill="#EFE7D9"/>
-  <rect x="0" y="0" width="400" height="130" fill="#7C2B2B"/>
-  <rect x="18" y="18" width="364" height="564" fill="none" stroke="#7C2B2B" stroke-width="1"/>
-  <text x="200" y="320" text-anchor="middle" fill="#211C17" font-family="Georgia, serif" font-style="italic" font-size="30">A Quiet</text>
-  <text x="200" y="360" text-anchor="middle" fill="#211C17" font-family="Georgia, serif" font-style="italic" font-size="30">Inheritance</text>
-  <text x="200" y="500" text-anchor="middle" fill="#7C2B2B" font-family="Georgia, serif" font-size="15" letter-spacing="3">PLACEHOLDER AUTHOR</text>
+  <rect width="400" height="600" fill="#E7E7E5"/>
+  <rect x="0" y="0" width="400" height="130" fill="#3D3D3C"/>
+  <rect x="18" y="18" width="364" height="564" fill="none" stroke="#3D3D3C" stroke-width="1"/>
+  <text x="200" y="320" text-anchor="middle" fill="#1C1C1B" font-family="Georgia, serif" font-style="italic" font-size="30">A Quiet</text>
+  <text x="200" y="360" text-anchor="middle" fill="#1C1C1B" font-family="Georgia, serif" font-style="italic" font-size="30">Inheritance</text>
+  <text x="200" y="500" text-anchor="middle" fill="#6E6E6C" font-family="Georgia, serif" font-size="15" letter-spacing="3">PLACEHOLDER AUTHOR</text>
 </svg>

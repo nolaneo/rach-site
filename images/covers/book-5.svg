@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="Field Notes for the End of Summer">
-  <rect width="400" height="600" fill="#6E7A4F"/>
-  <rect x="18" y="18" width="364" height="564" fill="none" stroke="#EDE7D6" stroke-width="1"/>
-  <path d="M120 170 q80 -60 160 0" fill="none" stroke="#EDE7D6" stroke-width="1.2"/>
-  <text x="200" y="330" text-anchor="middle" fill="#F5F1E6" font-family="Georgia, serif" font-style="italic" font-size="26">Field Notes for</text>
-  <text x="200" y="366" text-anchor="middle" fill="#F5F1E6" font-family="Georgia, serif" font-style="italic" font-size="26">the End of Summer</text>
-  <text x="200" y="510" text-anchor="middle" fill="#EDE7D6" font-family="Georgia, serif" font-size="15" letter-spacing="3">PLACEHOLDER AUTHOR</text>
+  <rect width="400" height="600" fill="#5A5A58"/>
+  <rect x="18" y="18" width="364" height="564" fill="none" stroke="#CFCFCC" stroke-width="1"/>
+  <path d="M120 170 q80 -60 160 0" fill="none" stroke="#CFCFCC" stroke-width="1.2"/>
+  <text x="200" y="330" text-anchor="middle" fill="#F0F0EE" font-family="Georgia, serif" font-style="italic" font-size="26">Field Notes for</text>
+  <text x="200" y="366" text-anchor="middle" fill="#F0F0EE" font-family="Georgia, serif" font-style="italic" font-size="26">the End of Summer</text>
+  <text x="200" y="510" text-anchor="middle" fill="#CFCFCC" font-family="Georgia, serif" font-size="15" letter-spacing="3">PLACEHOLDER AUTHOR</text>
 </svg>

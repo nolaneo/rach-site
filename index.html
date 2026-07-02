@@ -21,12 +21,12 @@
       theme: {
         extend: {
           colors: {
-            paper: "#FAF6EF",
-            paper2: "#F3ECE0",
-            ink: "#211C17",
-            muted: "#6B6154",
-            oxblood: "#7C2B2B",
-            line: "#DBD2C4"
+            paper: "#F5F5F4",
+            paper2: "#ECEBEA",
+            ink: "#1C1C1B",
+            muted: "#6E6E6C",
+            accent: "#3D3D3C",
+            line: "#DEDEDC"
           },
           fontFamily: {
             display: ['Fraunces', 'Georgia', 'serif'],
@@ -39,33 +39,19 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body class="bg-paper text-ink font-body antialiased selection:bg-oxblood selection:text-paper">
+<body class="bg-paper text-ink font-body antialiased selection:bg-accent selection:text-paper">
   <div class="grain" aria-hidden="true"></div>
-
-  <!-- Header / Nav -->
-  <header class="sticky top-0 z-30 bg-paper/85 backdrop-blur-sm border-b border-line">
-    <div class="mx-auto max-w-6xl px-6 md:px-10 h-16 flex items-center justify-between">
-      <a href="#top" class="font-display text-lg md:text-xl tracking-tight">Rachel&nbsp;Sargent</a>
-      <nav class="flex items-center gap-6 md:gap-9 text-sm tracking-wide">
-        <a href="#books" class="nav-link">Books</a>
-        <a href="#writing" class="nav-link">Writing</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
 
   <main id="top">
     <!-- Hero / Intro -->
     <section class="mx-auto max-w-6xl px-6 md:px-10 pt-16 md:pt-24 pb-16 md:pb-24">
-      <div class="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
-        <div class="md:col-span-4 md:order-2 reveal" style="--d:120ms">
-          <div class="portrait w-36 sm:w-44 md:w-full aspect-[4/5] rounded-sm overflow-hidden border border-line bg-paper2">
-            <img src="images/portrait.svg" alt="Portrait of Rachel Sargent" class="h-full w-full object-cover" />
-          </div>
+      <div class="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
+        <div class="portrait shrink-0 w-24 sm:w-28 md:w-32 aspect-square rounded-full overflow-hidden border border-line bg-paper2 reveal" style="--d:120ms">
+          <img src="images/portrait.svg" alt="Portrait of Rachel Sargent" class="h-full w-full object-cover" />
         </div>
-        <div class="md:col-span-8 md:order-1 reveal">
-          <p class="text-oxblood tracking-[0.25em] uppercase text-xs mb-6" data-field="role">Editor · Writer</p>
-          <p class="font-body text-xl md:text-2xl leading-relaxed text-ink" data-field="intro"></p>
+        <div class="reveal">
+          <h1 class="font-display font-light text-4xl md:text-5xl tracking-[-0.02em] leading-tight mb-5" data-field="name">Rachel Sargent</h1>
+          <p class="font-body text-xl md:text-2xl leading-relaxed text-ink max-w-2xl" data-field="intro"></p>
         </div>
       </div>
     </section>
@@ -105,7 +91,7 @@
           <h2 class="font-display font-light text-4xl md:text-5xl tracking-[-0.02em] leading-tight">
             Working on something?<br />I'd love to hear about it.
           </h2>
-          <a id="contact-email" href="#" class="inline-block mt-8 font-display text-2xl md:text-3xl text-oxblood underline decoration-line decoration-1 underline-offset-8 hover:decoration-oxblood transition-colors"></a>
+          <a id="contact-email" href="#" class="inline-block mt-8 font-display text-2xl md:text-3xl text-ink underline decoration-line decoration-1 underline-offset-8 hover:decoration-ink transition-colors"></a>
         </div>
         <div class="md:col-span-4 md:text-right">
           <ul id="social-list" class="flex md:justify-end gap-6 text-sm tracking-wide"></ul>

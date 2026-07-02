@@ -17,10 +17,10 @@ function placeholderCover(title = "", author = "") {
   const a = escapeHtml(author).slice(0, 40);
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="${t}">
-      <rect width="400" height="600" fill="#EFE7D9"/>
-      <rect x="16" y="16" width="368" height="568" fill="none" stroke="#CDBFA8" stroke-width="1.5"/>
-      <text x="200" y="270" text-anchor="middle" fill="#211C17" font-family="Georgia, serif" font-size="26" font-style="italic">${t}</text>
-      <text x="200" y="330" text-anchor="middle" fill="#7C2B2B" font-family="Georgia, serif" font-size="16" letter-spacing="2">${a}</text>
+      <rect width="400" height="600" fill="#E7E7E5"/>
+      <rect x="16" y="16" width="368" height="568" fill="none" stroke="#BDBDBB" stroke-width="1.5"/>
+      <text x="200" y="270" text-anchor="middle" fill="#1C1C1B" font-family="Georgia, serif" font-size="26" font-style="italic">${t}</text>
+      <text x="200" y="330" text-anchor="middle" fill="#6E6E6C" font-family="Georgia, serif" font-size="16" letter-spacing="2">${a}</text>
     </svg>`;
   return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
 }
@@ -31,7 +31,7 @@ function renderBio(data) {
       el.textContent = value || "";
     });
   };
-  set("role", data.role);
+  set("name", data.name);
   set("intro", data.intro);
 
   // Contact email
@@ -87,7 +87,7 @@ function renderBooks(books = []) {
         <div class="mt-4">
           <h3 class="font-display text-lg leading-snug tracking-tight">${title}</h3>
           ${author ? `<p class="text-muted text-sm mt-1 italic">${author}</p>` : ""}
-          ${meta ? `<p class="text-oxblood text-xs tracking-wide mt-1.5">${meta}</p>` : ""}
+          ${meta ? `<p class="text-muted text-xs tracking-wide mt-1.5">${meta}</p>` : ""}
         </div>`;
 
       const body = book.link
@@ -121,7 +121,7 @@ function renderWriting(pieces = []) {
       const titleMarkup = hasLink
         ? `<a href="${escapeHtml(
             p.link
-          )}" target="_blank" rel="noopener" class="hover:text-oxblood transition-colors">${title}<span class="text-oxblood"> ↗</span></a>`
+          )}" target="_blank" rel="noopener" class="hover:text-muted transition-colors">${title}<span class="text-muted"> ↗</span></a>`
         : title;
 
       return `

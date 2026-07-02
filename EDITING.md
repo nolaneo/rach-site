@@ -40,12 +40,12 @@ punctuation, so keep these three rules in mind:
 Near the top of `content.json` you'll see:
 
 ```json
-"role": "Editor · Writer",
+"name": "Rachel Sargent",
 "intro": "I'm a book editor and writer based in London...",
 "email": "hello@example.com",
 ```
 
-- **role** — the small line above your introduction.
+- **name** — your name, shown at the top of the page.
 - **intro** — your introduction paragraph.
 - **email** — where the "Contact" button points.
 
