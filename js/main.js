@@ -171,14 +171,22 @@ function initScrollReveal() {
   items.forEach((el) => io.observe(el));
 }
 
+/* Reveal the page (it starts hidden so content doesn't pop in after paint) */
+function revealPage() {
+  document.documentElement.classList.remove("loading");
+}
+
+/* Kick the fetch off immediately, before DOMContentLoaded, to shave latency */
+const contentPromise = fetch("content.json", { cache: "no-cache" }).then((res) => {
+  if (!res.ok) throw new Error(`content.json returned ${res.status}`);
+  return res.json();
+});
+
 async function init() {
   document.getElementById("year").textContent = new Date().getFullYear();
 
   try {
-    const res = await fetch("content.json", { cache: "no-cache" });
-    if (!res.ok) throw new Error(`content.json returned ${res.status}`);
-    const data = await res.json();
-
+    const data = await contentPromise;
     renderBio(data);
     renderBooks(data.books);
     renderWriting(data.writing);
@@ -189,7 +197,13 @@ async function init() {
     if (grid) {
       grid.innerHTML = `<li class="col-span-full text-muted italic">Content failed to load. If you're opening this file directly, run it through a local server (see README).</li>`;
     }
+  } finally {
+    // Content is now in the DOM (or failed) — show the page as one complete paint
+    revealPage();
   }
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+// Safety net: never leave the page hidden if something stalls
+setTimeout(revealPage, 2000);

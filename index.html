@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth loading">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +36,16 @@
       }
     };
   </script>
+  <!-- Start fetching content early -->
+  <link rel="preload" href="content.json" as="fetch" />
+  <!-- Hide the page until JS has rendered content.json, so it appears complete
+       in one paint instead of empty content "popping in" afterwards. -->
+  <style>
+    html { background: #F5F5F4; }
+    html.loading body { opacity: 0; }
+  </style>
+  <noscript><style>html.loading body { opacity: 1 !important; }</style></noscript>
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
