@@ -133,15 +133,18 @@ function renderWriting(pieces = []) {
           )}" target="_blank" rel="noopener" class="hover:text-muted transition-colors">${title}<span class="text-muted"> ↗</span></a>`
         : title;
 
+      const metaParts = [];
+      if (pub) metaParts.push(`<span class="italic">${pub}</span>`);
+      if (year) metaParts.push(year);
+      const meta = metaParts.join(" · ");
+
       return `
         <li class="writing-row on-scroll" style="transition-delay:${(i % 6) * 60}ms">
-          <div>
-            <h3 class="font-display text-xl md:text-2xl font-light tracking-tight leading-snug">${titleMarkup}</h3>
-            ${excerpt ? `<p class="text-muted mt-1.5 leading-relaxed">${excerpt}</p>` : ""}
+          <div class="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-6">
+            <h3 class="font-display text-lg leading-snug tracking-tight">${titleMarkup}</h3>
+            ${meta ? `<p class="text-muted text-xs tracking-wide mt-1 md:mt-0 md:text-right md:whitespace-nowrap shrink-0">${meta}</p>` : ""}
           </div>
-          <div class="text-sm text-muted tracking-wide whitespace-nowrap">
-            ${pub ? `<span class="italic">${pub}</span>` : ""}${pub && year ? " · " : ""}${year}
-          </div>
+          ${excerpt ? `<p class="text-muted text-sm mt-1.5 leading-relaxed">${excerpt}</p>` : ""}
         </li>`;
     })
     .join("");
