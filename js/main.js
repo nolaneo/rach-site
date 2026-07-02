@@ -32,7 +32,16 @@ function renderBio(data) {
     });
   };
   set("name", data.name);
-  set("intro", data.intro);
+
+  // Intro: accepts a single string or a list of paragraphs
+  const introEl = document.getElementById("intro");
+  if (introEl) {
+    const paragraphs = Array.isArray(data.intro) ? data.intro : [data.intro];
+    introEl.innerHTML = paragraphs
+      .filter(Boolean)
+      .map((p) => `<p>${escapeHtml(p)}</p>`)
+      .join("");
+  }
 
   // Contact email
   const emailEl = document.getElementById("contact-email");

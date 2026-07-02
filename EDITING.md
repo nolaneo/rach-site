@@ -41,12 +41,17 @@ Near the top of `content.json` you'll see:
 
 ```json
 "name": "Rachel Sargent",
-"intro": "I'm a book editor and writer based in London...",
+"intro": [
+  "Your first paragraph goes here...",
+  "Your second paragraph goes here..."
+],
 "email": "hello@example.com",
 ```
 
 - **name** — your name, shown at the top of the page.
-- **intro** — your introduction paragraph.
+- **intro** — your introduction, written as a list of paragraphs. Each
+  paragraph sits inside its own `"quotes"`, separated by commas. Add a line to
+  add a paragraph, or delete a line to remove one (no comma after the last one).
 - **email** — where the "Contact" button points.
 
 Just replace the text between the quotes.
