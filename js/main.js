@@ -7,18 +7,16 @@
    show/hide) and the on-scroll reveals. To change content, edit content.json.
    ------------------------------------------------------------------ */
 
-/* Scroll-spy + visibility for the floating bottom section nav.
-   Content is never hidden — this only moves an underline and shows the pill. */
+/* Scroll-spy: highlight the section-nav link for the section in view.
+   The nav pill is always visible; this just moves the active underline. */
 function initSectionNav() {
-  const nav = document.getElementById("section-nav");
   const links = Array.from(document.querySelectorAll(".section-link"));
-  if (!nav || !links.length || !("IntersectionObserver" in window)) return;
+  if (!links.length || !("IntersectionObserver" in window)) return;
 
   const sections = links
     .map((l) => document.getElementById(l.dataset.section))
     .filter(Boolean);
 
-  // --- Scroll-spy: mark the section currently in view ---
   const setActive = (id) => {
     links.forEach((l) => l.classList.toggle("is-active", l.dataset.section === id));
   };
@@ -32,38 +30,6 @@ function initSectionNav() {
     { rootMargin: "-15% 0px -70% 0px", threshold: 0 }
   );
   sections.forEach((s) => spy.observe(s));
-
-  // --- Visibility: show after the hero, hide over the footer ---
-  const hero = document.getElementById("hero");
-  const footer = document.querySelector("footer");
-  let pastHero = false;
-  let footerVisible = false;
-  const update = () =>
-    nav.classList.toggle("nav-visible", pastHero && !footerVisible);
-
-  if (hero) {
-    new IntersectionObserver(
-      ([e]) => {
-        pastHero = !e.isIntersecting;
-        update();
-      },
-      { threshold: 0 }
-    ).observe(hero);
-  } else {
-    pastHero = true;
-  }
-
-  if (footer) {
-    new IntersectionObserver(
-      ([e]) => {
-        footerVisible = e.isIntersecting;
-        update();
-      },
-      { threshold: 0 }
-    ).observe(footer);
-  }
-
-  update();
 }
 
 /* Reveal .on-scroll elements as they enter the viewport */

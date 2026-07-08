@@ -46,20 +46,6 @@ html, body { -webkit-font-smoothing: antialiased; }
 }
 .nav-link:hover::after { transform: scaleX(1); }
 
-/* Floating bottom section-nav: hidden until scrolled past the hero */
-#section-nav {
-  opacity: 0;
-  transform: translateY(140%);
-  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-#section-nav.nav-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-@media (prefers-reduced-motion: reduce) {
-  #section-nav { transition: opacity 0.2s ease; transform: none; }
-}
-
 /* In-page section nav — tabs read as links via a persistent underline
    (same affordance as the story links); the current section is slate-blue. */
 .section-link {
