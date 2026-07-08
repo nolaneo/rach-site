@@ -102,7 +102,7 @@ function renderBooks(gridId, books = []) {
           )}" target="_blank" rel="noopener">${inner}</a>`
         : `<div class="book-card">${inner}</div>`;
 
-      return `<li class="on-scroll" style="transition-delay:${(i % 4) * 70}ms">${body}</li>`;
+      return `<li class="on-scroll" style="transition-delay:${(i % 3) * 70}ms">${body}</li>`;
     })
     .join("");
 }
