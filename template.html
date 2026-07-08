@@ -25,24 +25,58 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
+    (function () {
+      // Theme palette. The default (no URL params) is the subtle blue-grey.
+      // Test other palettes live, without rebuilding:
+      //   ?palette=coastal | sky            — named presets below
+      //   ?colors=paper,paper2,ink,muted,accent,line   (hex, '#' optional)
+      var KEYS = ["paper", "paper2", "ink", "muted", "accent", "line"];
+      var DEFAULT = {
+        paper: "#E9EEF3", paper2: "#DFE7EE", ink: "#1B2530",
+        muted: "#5C6A78", accent: "#3C5A78", line: "#CDD8E1"
+      };
+      var PRESETS = {
+        // Built from the more colourful blue palette
+        coastal: {
+          paper: "#d9dcd6", paper2: "#cbd3ce", ink: "#16425b",
+          muted: "#2f6690", accent: "#3a7ca5", line: "#b7c3c1"
+        },
+        sky: {
+          paper: "#e4f0f5", paper2: "#cfe6ee", ink: "#16425b",
+          muted: "#2f6690", accent: "#3a7ca5", line: "#a9cdda"
+        }
+      };
+
+      var params = new URLSearchParams(location.search);
+      var palette = Object.assign({}, DEFAULT);
+      var named = params.get("palette");
+      if (named && PRESETS[named]) palette = Object.assign({}, PRESETS[named]);
+      var raw = params.get("colors");
+      if (raw) {
+        raw.split(",").forEach(function (c, i) {
+          c = (c || "").trim();
+          if (c && KEYS[i]) palette[KEYS[i]] = c[0] === "#" ? c : "#" + c;
+        });
+      }
+
+      // Feed Tailwind (hex keeps opacity modifiers like bg-paper/90 working)
+      tailwind.config = {
+        theme: { extend: {
           colors: {
-            paper: "#E9EEF3",
-            paper2: "#DFE7EE",
-            ink: "#1B2530",
-            muted: "#5C6A78",
-            accent: "#3C5A78",
-            line: "#CDD8E1"
+            paper: palette.paper, paper2: palette.paper2, ink: palette.ink,
+            muted: palette.muted, accent: palette.accent, line: palette.line
           },
           fontFamily: {
             display: ['Fraunces', 'Georgia', 'serif'],
             body: ['Newsreader', 'Georgia', 'serif']
           }
-        }
-      }
-    };
+        } }
+      };
+      // Feed CSS variables (used by css/styles.css)
+      var root = document.documentElement;
+      KEYS.forEach(function (k) { root.style.setProperty("--" + k, palette[k]); });
+      root.style.background = palette.paper;
+    })();
   </script>
   <style>html { background: #E9EEF3; }</style>
   <link rel="stylesheet" href="css/styles.css" />
