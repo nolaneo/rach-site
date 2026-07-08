@@ -49,20 +49,20 @@ html, body { -webkit-font-smoothing: antialiased; }
 /* In-page section nav — tabs read as links via a persistent underline
    (same affordance as the story links); the current section is slate-blue. */
 .section-link {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
+  text-align: center;
   color: var(--ink, #1B2530);
-  text-decoration: underline;
-  text-decoration-color: var(--line, #CDD8E1);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-underline-offset: 5px;
+  transition: color 0.25s ease;
 }
 /* Reserve the bold width so the tab doesn't shift when it becomes active:
    an invisible, zero-height bold copy of the label sets the element's width. */
 .section-link::after {
   content: attr(data-label);
+  display: block;
   font-weight: 600;
   height: 0;
   overflow: hidden;
@@ -71,12 +71,24 @@ html, body { -webkit-font-smoothing: antialiased; }
 }
 .section-link:hover {
   color: var(--accent, #3C5A78);
+  text-decoration: underline;
   text-decoration-color: var(--accent, #3C5A78);
+  text-decoration-thickness: 1px;
 }
 .section-link.is-active {
   color: var(--accent, #3C5A78);
-  text-decoration-color: var(--accent, #3C5A78);
   font-weight: 600;
+}
+
+/* Subtle dot separators between tabs */
+#section-nav li {
+  display: flex;
+  align-items: center;
+}
+#section-nav li:not(:first-child)::before {
+  content: "·";
+  margin: 0 0.85rem;
+  color: #AEBECB;
 }
 
 /* Section headings */
