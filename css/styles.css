@@ -64,6 +64,7 @@ html, body { -webkit-font-smoothing: antialiased; }
 .section-link.is-active {
   color: var(--accent, #3C5A78);
   text-decoration-color: var(--accent, #3C5A78);
+  font-weight: 600;
 }
 
 /* Section headings */
