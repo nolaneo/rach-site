@@ -127,7 +127,7 @@ function renderWriting(pieces = []) {
       const titleMarkup = hasLink
         ? `<a href="${escapeHtml(
             p.link
-          )}" target="_blank" rel="noopener" class="hover:text-muted transition-colors">${title}<span class="text-muted"> ↗</span></a>`
+          )}" target="_blank" rel="noopener" class="writing-link">${title}<span class="arrow"> ↗</span></a>`
         : title;
 
       const metaParts = [];
