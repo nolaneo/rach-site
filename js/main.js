@@ -17,10 +17,10 @@ function placeholderCover(title = "", author = "") {
   const a = escapeHtml(author).slice(0, 40);
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600" role="img" aria-label="${t}">
-      <rect width="400" height="600" fill="#E7E7E5"/>
-      <rect x="16" y="16" width="368" height="568" fill="none" stroke="#BDBDBB" stroke-width="1.5"/>
-      <text x="200" y="270" text-anchor="middle" fill="#1C1C1B" font-family="Georgia, serif" font-size="26" font-style="italic">${t}</text>
-      <text x="200" y="330" text-anchor="middle" fill="#6E6E6C" font-family="Georgia, serif" font-size="16" letter-spacing="2">${a}</text>
+      <rect width="400" height="600" fill="#DFE7EE"/>
+      <rect x="16" y="16" width="368" height="568" fill="none" stroke="#AEBECB" stroke-width="1.5"/>
+      <text x="200" y="270" text-anchor="middle" fill="#1B2530" font-family="Georgia, serif" font-size="26" font-style="italic">${t}</text>
+      <text x="200" y="330" text-anchor="middle" fill="#5C6A78" font-family="Georgia, serif" font-size="16" letter-spacing="2">${a}</text>
     </svg>`;
   return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
 }
@@ -64,8 +64,8 @@ function renderBio(data) {
   }
 }
 
-function renderBooks(books = []) {
-  const grid = document.getElementById("books-grid");
+function renderBooks(gridId, books = []) {
+  const grid = document.getElementById(gridId);
   if (!grid) return;
 
   if (!books.length) {
@@ -77,13 +77,10 @@ function renderBooks(books = []) {
     .map((book, i) => {
       const title = escapeHtml(book.title);
       const author = escapeHtml(book.author);
-      const year = book.year ? escapeHtml(book.year) : "";
-      const role = book.role ? escapeHtml(book.role) : "";
+      const meta = book.category ? escapeHtml(book.category) : "";
       const cover = book.cover
         ? escapeHtml(book.cover)
         : placeholderCover(book.title, book.author);
-
-      const meta = [role, year].filter(Boolean).join(" · ");
 
       const inner = `
         <div class="book-cover">
@@ -150,6 +147,33 @@ function renderWriting(pieces = []) {
     .join("");
 }
 
+function renderAwards(awards = []) {
+  const list = document.getElementById("awards-list");
+  if (!list) return;
+
+  if (!awards.length) {
+    list.innerHTML = `<li class="writing-row text-muted italic">Awards coming soon.</li>`;
+    return;
+  }
+
+  list.innerHTML = awards
+    .map((a, i) => {
+      const title = escapeHtml(a.title);
+      const detail = a.detail ? escapeHtml(a.detail) : "";
+      const year = a.year ? escapeHtml(a.year) : "";
+
+      return `
+        <li class="writing-row on-scroll" style="transition-delay:${(i % 6) * 60}ms">
+          <div class="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-6">
+            <h3 class="font-display text-lg leading-snug tracking-tight">${title}</h3>
+            ${year ? `<p class="text-muted text-xs tracking-wide mt-1 md:mt-0 md:text-right md:whitespace-nowrap shrink-0">${year}</p>` : ""}
+          </div>
+          ${detail ? `<p class="text-muted text-sm mt-1.5 leading-relaxed">${detail}</p>` : ""}
+        </li>`;
+    })
+    .join("");
+}
+
 /* Reveal .on-scroll elements as they enter the viewport */
 function initScrollReveal() {
   const items = document.querySelectorAll(".on-scroll");
@@ -188,12 +212,14 @@ async function init() {
   try {
     const data = await contentPromise;
     renderBio(data);
-    renderBooks(data.books);
+    renderBooks("books-edited", data.booksEdited);
+    renderBooks("books-coedited", data.booksCoedited);
     renderWriting(data.writing);
+    renderAwards(data.awards);
     initScrollReveal();
   } catch (err) {
     console.error("Could not load content.json:", err);
-    const grid = document.getElementById("books-grid");
+    const grid = document.getElementById("books-edited");
     if (grid) {
       grid.innerHTML = `<li class="col-span-full text-muted italic">Content failed to load. If you're opening this file directly, run it through a local server (see README).</li>`;
     }

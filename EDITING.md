@@ -45,35 +45,51 @@ Near the top of `content.json` you'll see:
   "Your first paragraph goes here...",
   "Your second paragraph goes here..."
 ],
-"email": "hello@example.com",
+"email": "rmsargent11@gmail.com",
 ```
 
 - **name** — your name, shown at the top of the page.
 - **intro** — your introduction, written as a list of paragraphs. Each
   paragraph sits inside its own `"quotes"`, separated by commas. Add a line to
   add a paragraph, or delete a line to remove one (no comma after the last one).
-- **email** — where the "Contact" button points.
+- **email** — where the "Get in touch" button points (this is public on the site).
 
 Just replace the text between the quotes.
 
 ---
 
+## The sections of the site
+
+Below the intro, the page has these sections, each with its own list in
+`content.json`:
+
+| Section on the page      | List in `content.json` |
+| ------------------------ | ---------------------- |
+| Books I've Edited        | `booksEdited`          |
+| Books I've Co-Edited     | `booksCoedited`        |
+| Fiction                  | `writing`              |
+| Awards & Honors          | `awards`               |
+
+---
+
 ## Adding or changing a book
 
-Find the `"books"` section. Each book looks like this:
+Both book lists (`booksEdited` and `booksCoedited`) work the same way. Each book
+looks like this:
 
 ```json
 {
-  "title": "Northlight",
-  "author": "Placeholder Author",
-  "year": 2023,
-  "role": "Editor",
-  "cover": "images/covers/book-3.svg",
+  "title": "Evil Genius",
+  "author": "Claire Oshetsky",
+  "category": "Novel",
+  "cover": "images/covers/evil-genius.jpg",
   "link": ""
 }
 ```
 
-- **title / author / year / role** — the book's details.
+- **title / author** — the book's details.
+- **category** — a short label under the author, e.g. `Novel`, `Stories`,
+  `Poems`, `Memoir`, `Nonfiction`. Leave as `""` to show nothing.
 - **cover** — the path to the cover image (see below).
 - **link** — an optional web address (e.g. the publisher's page). Leave it as
   `""` if there isn't one; the cover just won't be clickable.
@@ -97,25 +113,39 @@ shows a neat placeholder with the title on it — nothing will look broken.
 
 ---
 
-## Adding a piece you've written
+## Adding a piece of writing
 
 Find the `"writing"` section. Each piece looks like this:
 
 ```json
 {
-  "title": "On the Art of the Invisible Edit",
-  "publication": "The Literary Review",
+  "title": "What Comes After",
+  "publication": "Gulf Coast",
   "year": 2024,
-  "link": "#",
-  "excerpt": "What it means to shape a book without leaving fingerprints."
+  "link": "https://gulfcoastmag.org/stories/what-comes-after,4611?"
 }
 ```
 
-- **link** — the web address of the article. Leave it as `"#"` if it isn't
+- **link** — the web address of the story. Leave it as `""` if it isn't
   online; the title just won't be clickable.
-- **excerpt** — a one-line description (optional).
 
-Add, copy, or remove blocks exactly like the books.
+---
+
+## Adding an award or honor
+
+Find the `"awards"` section. Each entry looks like this:
+
+```json
+{
+  "title": "Finalist — Tucson Festival of Books Literary Awards: Short Story",
+  "detail": "For the short story “Your Life Will Begin Shortly”",
+  "year": 2023
+}
+```
+
+- **title** — the main line (the award).
+- **detail** — the smaller line underneath (optional; use `""` for none).
+- **year** — shown on the right.
 
 ---
 

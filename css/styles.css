@@ -4,8 +4,9 @@
    ------------------------------------------------------------------ */
 
 :root {
-  --accent: #3D3D3C;
-  --line: #DEDEDC;
+  --accent: #3C5A78;
+  --muted: #5C6A78;
+  --line: #CDD8E1;
 }
 
 html, body { -webkit-font-smoothing: antialiased; }
@@ -26,7 +27,7 @@ html, body { -webkit-font-smoothing: antialiased; }
 /* Nav links with a fine animated underline */
 .nav-link {
   position: relative;
-  color: var(--muted, #6E6E6C);
+  color: var(--muted, #5C6A78);
   padding-bottom: 2px;
 }
 .nav-link:hover { color: var(--accent); }
@@ -53,8 +54,18 @@ html, body { -webkit-font-smoothing: antialiased; }
   line-height: 1.05;
 }
 
+/* Sub-section headings (e.g. "Books I've Edited") */
+.sub-title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted, #5C6A78);
+  letter-spacing: 0.01em;
+  font-size: 1.125rem;
+}
+
 /* Portrait tint */
-.portrait { box-shadow: 0 30px 60px -40px rgba(33, 28, 23, 0.55); }
+.portrait { box-shadow: 0 30px 60px -40px rgba(27, 37, 48, 0.5); }
 
 /* Book cards */
 .book-card { display: block; }
@@ -64,16 +75,18 @@ html, body { -webkit-font-smoothing: antialiased; }
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 2px;
-  background: #ECEBEA;
-  box-shadow: 0 20px 40px -30px rgba(33, 28, 23, 0.6);
+  background: #DFE7EE;
+  box-shadow: 0 20px 40px -30px rgba(27, 37, 48, 0.55);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .book-card:hover .book-cover {
   transform: translateY(-6px);
-  box-shadow: 0 34px 55px -30px rgba(33, 28, 23, 0.7);
+  box-shadow: 0 34px 55px -30px rgba(27, 37, 48, 0.65);
 }
-.book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* contain (not cover) so cover art is never cropped; covers sit ~2:3 so any
+   letterboxing blends into the matching background */
+.book-cover img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* Writing list rows */
 .writing-row {

@@ -15,14 +15,17 @@ JSON, commit, and the site redeploys automatically.
 
 ```
 index.html            # markup + Tailwind config (CDN)
-css/styles.css        # custom polish (fonts, drop cap, grain, animations)
+css/styles.css        # custom polish (fonts, grain, animations, book cards)
 js/main.js            # loads content.json and renders the page
-content.json          # ← all editable content (bio, books, writing)
-images/portrait.svg   # portrait placeholder
-images/covers/        # book cover art (placeholders included)
+content.json          # ← all editable content (bio, books, writing, awards)
+images/portrait.jpg   # portrait
+images/covers/        # book cover art
 .github/workflows/deploy.yml   # GitHub Pages deploy action
 EDITING.md            # non-technical editing guide
 ```
+
+Content is grouped into four editable lists in `content.json`: `booksEdited`,
+`booksCoedited`, `writing`, and `awards` — each rendered as its own page section.
 
 ## Running locally
 
@@ -36,9 +39,11 @@ python3 -m http.server 8000
 
 ## Design notes
 
-Editorial / literary aesthetic: warm "paper" background, ink text, a single
-oxblood accent, hairline rules, and a Fraunces (display) + Newsreader (body)
-type pairing. Fully responsive across mobile and desktop.
+Editorial / literary aesthetic: a soft blue-grey "paper" background, deep
+navy-charcoal ink, a slate-blue accent, hairline rules, and a Fraunces (display)
++ Newsreader (body) type pairing. Book covers are shown uncropped (`object-fit:
+contain`) so the colourful art pops against the muted palette. Fully responsive
+across mobile and desktop.
 
 ## Tech choices
 

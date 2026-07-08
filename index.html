@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rachel Sargent — Editor & Writer</title>
-  <meta name="description" content="Rachel Sargent is a book editor and writer. A selection of books she has edited, and pieces she has written." />
+  <title>Rachel Sargent — Writer & Editor</title>
+  <meta name="description" content="Rachel Sargent is a writer and editor based in New York City, working at Ecco / HarperCollins. Editorial work, fiction, and awards." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Rachel Sargent — Editor & Writer" />
-  <meta property="og:description" content="A book editor and writer. A selection of books edited, and pieces written." />
+  <meta property="og:title" content="Rachel Sargent — Writer & Editor" />
+  <meta property="og:description" content="A writer and editor based in New York City. Editorial work, fiction, and awards." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/portrait.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,12 +22,12 @@
       theme: {
         extend: {
           colors: {
-            paper: "#F5F5F4",
-            paper2: "#ECEBEA",
-            ink: "#1C1C1B",
-            muted: "#6E6E6C",
-            accent: "#3D3D3C",
-            line: "#DEDEDC"
+            paper: "#E9EEF3",
+            paper2: "#DFE7EE",
+            ink: "#1B2530",
+            muted: "#5C6A78",
+            accent: "#3C5A78",
+            line: "#CDD8E1"
           },
           fontFamily: {
             display: ['Fraunces', 'Georgia', 'serif'],
@@ -41,7 +42,7 @@
   <!-- Hide the page until JS has rendered content.json, so it appears complete
        in one paint instead of empty content "popping in" afterwards. -->
   <style>
-    html { background: #F5F5F4; }
+    html { background: #E9EEF3; }
     html.loading body { opacity: 0; }
   </style>
   <noscript><style>html.loading body { opacity: 1 !important; }</style></noscript>
@@ -63,22 +64,25 @@
     <!-- Hero / Intro -->
     <section class="mx-auto max-w-2xl px-8 md:px-10 pt-10 md:pt-12 pb-16 md:pb-24 text-center">
       <div class="portrait mx-auto w-24 sm:w-28 aspect-square rounded-full overflow-hidden border border-line bg-paper2">
-        <img src="images/portrait.svg" alt="Portrait of Rachel Sargent" class="h-full w-full object-cover" />
+        <img src="images/portrait.jpg" alt="Portrait of Rachel Sargent" class="h-full w-full object-cover" />
       </div>
       <div id="intro" class="mt-10 md:mt-12 space-y-4 text-justify hyphens-auto font-body text-base md:text-lg leading-relaxed text-ink/90"></div>
     </section>
 
     <hr class="mx-auto max-w-6xl border-line" />
 
-    <!-- Books -->
-    <section id="books" class="mx-auto max-w-6xl px-8 md:px-10 py-16 md:py-24 scroll-mt-20">
+    <!-- Editorial Work -->
+    <section id="editorial" class="mx-auto max-w-6xl px-8 md:px-10 py-16 md:py-24 scroll-mt-20">
       <div class="flex items-baseline justify-between gap-6 mb-10 md:mb-14">
-        <h2 class="section-title">Selected Books</h2>
-        <span class="text-muted text-sm tracking-wide">As editor</span>
+        <h2 class="section-title">Editorial Work</h2>
+        <span class="text-muted text-sm tracking-wide">Ecco · HarperCollins</span>
       </div>
-      <ul id="books-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-10 md:gap-y-16">
-        <!-- injected by js/main.js -->
-      </ul>
+
+      <h3 class="sub-title mb-8">Books I've Edited</h3>
+      <ul id="books-edited" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-10 md:gap-y-16"></ul>
+
+      <h3 class="sub-title mt-16 md:mt-20 mb-8">Books I've Co-Edited</h3>
+      <ul id="books-coedited" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12 md:gap-x-10 md:gap-y-16"></ul>
     </section>
 
     <hr class="mx-auto max-w-6xl border-line" />
@@ -86,12 +90,20 @@
     <!-- Writing -->
     <section id="writing" class="mx-auto max-w-6xl px-8 md:px-10 py-16 md:py-24 scroll-mt-20">
       <div class="flex items-baseline justify-between gap-6 mb-10 md:mb-14">
-        <h2 class="section-title">Pieces I've Written</h2>
-        <span class="text-muted text-sm tracking-wide">Essays &amp; criticism</span>
+        <h2 class="section-title">Fiction</h2>
+        <span class="text-muted text-sm tracking-wide">Selected stories</span>
       </div>
-      <ul id="writing-list" class="border-t border-line">
-        <!-- injected by js/main.js -->
-      </ul>
+      <ul id="writing-list" class="border-t border-line"></ul>
+    </section>
+
+    <hr class="mx-auto max-w-6xl border-line" />
+
+    <!-- Awards -->
+    <section id="awards" class="mx-auto max-w-6xl px-8 md:px-10 py-16 md:py-24 scroll-mt-20">
+      <div class="flex items-baseline justify-between gap-6 mb-10 md:mb-14">
+        <h2 class="section-title">Awards &amp; Honors</h2>
+      </div>
+      <ul id="awards-list" class="border-t border-line"></ul>
     </section>
   </main>
 
