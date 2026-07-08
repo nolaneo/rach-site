@@ -4,12 +4,12 @@
    ------------------------------------------------------------------ */
 
 :root {
-  --paper: #E9EEF3;
-  --paper2: #DFE7EE;
-  --ink: #1B2530;
-  --accent: #3C5A78;
-  --muted: #5C6A78;
-  --line: #CDD8E1;
+  --paper: #16425b;
+  --paper2: #1b4d69;
+  --ink: #e8f2f7;
+  --accent: #81c3d7;
+  --muted: #9dc4d6;
+  --line: #5a93b3;
 }
 
 html, body { -webkit-font-smoothing: antialiased; }

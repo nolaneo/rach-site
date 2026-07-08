@@ -31,11 +31,17 @@
       //   ?palette=coastal | sky            — named presets below
       //   ?colors=paper,paper2,ink,muted,accent,line   (hex, '#' optional)
       var KEYS = ["paper", "paper2", "ink", "muted", "accent", "line"];
+      // Default: the dramatic dark blue ("navy").
       var DEFAULT = {
-        paper: "#E9EEF3", paper2: "#DFE7EE", ink: "#1B2530",
-        muted: "#5C6A78", accent: "#3C5A78", line: "#CDD8E1"
+        paper: "#16425b", paper2: "#1b4d69", ink: "#e8f2f7",
+        muted: "#9dc4d6", accent: "#81c3d7", line: "#5a93b3"
       };
       var PRESETS = {
+        // The original subtle blue-grey (light theme)
+        slate: {
+          paper: "#E9EEF3", paper2: "#DFE7EE", ink: "#1B2530",
+          muted: "#5C6A78", accent: "#3C5A78", line: "#CDD8E1"
+        },
         // Built from the more colourful blue palette
         coastal: {
           paper: "#d9dcd6", paper2: "#cbd3ce", ink: "#16425b",
@@ -50,7 +56,7 @@
           paper: "#81c3d7", paper2: "#71b7cd", ink: "#0f3850",
           muted: "#164a67", accent: "#0d4a73", line: "#a4d1df"
         },
-        // Dramatic dark blue
+        // Dramatic dark blue (now also the default)
         navy: {
           paper: "#16425b", paper2: "#1b4d69", ink: "#e8f2f7",
           muted: "#9dc4d6", accent: "#81c3d7", line: "#5a93b3"
@@ -88,7 +94,8 @@
       root.style.background = palette.paper;
     })();
   </script>
-  <style>html { background: #E9EEF3; }</style>
+  <style>html { background: #16425b; }</style>
+  <meta name="theme-color" content="#16425b" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
