@@ -33,6 +33,10 @@ jobs:
       - name: Build index.html from content.json
         run: python3 build.py # Python 3 is preinstalled on ubuntu-latest; no deps
 
+      - name: Set custom domain (only on Rachel's repo)
+        if: github.repository == 'rachelmsargent/website'
+        run: echo 'rachelsargent.com' > CNAME
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
