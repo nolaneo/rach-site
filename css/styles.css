@@ -53,7 +53,8 @@ html, body { -webkit-font-smoothing: antialiased; }
   text-align: center;
   color: var(--ink, #1B2530);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
+  font-size: 0.625rem;
   text-decoration: none;
   text-underline-offset: 5px;
   transition: color 0.25s ease;
@@ -87,8 +88,10 @@ html, body { -webkit-font-smoothing: antialiased; }
 }
 #section-nav li:not(:first-child)::before {
   content: "·";
-  margin: 0 0.85rem;
-  color: #AEBECB;
+  margin: 0 0.7rem;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: #8FA2B3;
 }
 
 /* Section headings */
