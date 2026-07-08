@@ -49,13 +49,25 @@ html, body { -webkit-font-smoothing: antialiased; }
 /* In-page section nav — tabs read as links via a persistent underline
    (same affordance as the story links); the current section is slate-blue. */
 .section-link {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   color: var(--ink, #1B2530);
   text-decoration: underline;
   text-decoration-color: var(--line, #CDD8E1);
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
   transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+/* Reserve the bold width so the tab doesn't shift when it becomes active:
+   an invisible, zero-height bold copy of the label sets the element's width. */
+.section-link::after {
+  content: attr(data-label);
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
 }
 .section-link:hover {
   color: var(--accent, #3C5A78);
