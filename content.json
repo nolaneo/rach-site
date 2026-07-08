@@ -7,22 +7,22 @@
   "email": "rmsargent11@gmail.com",
   "social": [],
   "booksEdited": [
-    { "title": "A Bomb Placed Close to the Heart", "author": "Nishant Batsha", "category": "Novel", "cover": "images/covers/a-bomb-placed.jpg", "link": "" },
-    { "title": "Evil Genius", "author": "Claire Oshetsky", "category": "Novel", "cover": "images/covers/evil-genius.jpg", "link": "" },
-    { "title": "Extinction Capital of the World", "author": "Mariah Rigg", "category": "Stories", "cover": "images/covers/extinction-capital.jpg", "link": "" },
-    { "title": "Frida Slattery As Herself", "author": "Ana Kinsella", "category": "Novel", "cover": "images/covers/frida-slattery.jpg", "link": "" },
-    { "title": "The Inheritance", "author": "Bennett Capers", "category": "Novel", "cover": "images/covers/the-inheritance.jpg", "link": "" },
-    { "title": "Observer", "author": "Nicholas Russell", "category": "Novel", "cover": "images/covers/observer.jpg", "link": "" },
-    { "title": "Pills and Jacksonvilles", "author": "Jillian Weise", "category": "Poems", "cover": "images/covers/pills-and-jacksonvilles.jpg", "link": "" },
-    { "title": "Tomorrow We'll Be Prey", "author": "Anna Polonyi", "category": "Novel", "cover": "images/covers/tomorrow-well-be-prey.jpg", "link": "" }
+    { "title": "A Bomb Placed Close to the Heart", "author": "Nishant Batsha", "cover": "images/covers/a-bomb-placed.jpg", "link": "" },
+    { "title": "Evil Genius", "author": "Claire Oshetsky", "cover": "images/covers/evil-genius.jpg", "link": "" },
+    { "title": "Extinction Capital of the World", "author": "Mariah Rigg", "cover": "images/covers/extinction-capital.jpg", "link": "" },
+    { "title": "Frida Slattery As Herself", "author": "Ana Kinsella", "cover": "images/covers/frida-slattery.jpg", "link": "" },
+    { "title": "The Inheritance", "author": "Bennett Capers", "cover": "images/covers/the-inheritance.jpg", "link": "" },
+    { "title": "Observer", "author": "Nicholas Russell", "cover": "images/covers/observer.jpg", "link": "" },
+    { "title": "Pills and Jacksonvilles", "author": "Jillian Weise", "cover": "images/covers/pills-and-jacksonvilles.jpg", "link": "" },
+    { "title": "Tomorrow We'll Be Prey", "author": "Anna Polonyi", "cover": "images/covers/tomorrow-well-be-prey.jpg", "link": "" }
   ],
   "booksCoedited": [
-    { "title": "Articulate: A Deaf Memoir of Voice", "author": "Rachel Kolb", "category": "Memoir", "cover": "images/covers/articulate.jpg", "link": "" },
-    { "title": "Birding to Change the World", "author": "Trish O'Kane", "category": "Memoir", "cover": "images/covers/birding-to-change-the-world.jpg", "link": "" },
-    { "title": "The Golden Hour", "author": "Matthew Specktor", "category": "Nonfiction", "cover": "images/covers/the-golden-hour.jpg", "link": "" },
-    { "title": "The Icon & The Idealist", "author": "Stephanie Gorton", "category": "Nonfiction", "cover": "images/covers/the-icon-and-the-idealist.jpg", "link": "" },
-    { "title": "Invisible Labor", "author": "Rachel Somerstein", "category": "Nonfiction", "cover": "images/covers/invisible-labor.jpg", "link": "" },
-    { "title": "Nina Simone and the World She Made", "author": "Salamishah Tillet", "category": "Biography", "cover": "images/covers/nina-simone.jpg", "link": "" }
+    { "title": "Articulate: A Deaf Memoir of Voice", "author": "Rachel Kolb", "cover": "images/covers/articulate.jpg", "link": "" },
+    { "title": "Birding to Change the World", "author": "Trish O'Kane", "cover": "images/covers/birding-to-change-the-world.jpg", "link": "" },
+    { "title": "The Golden Hour", "author": "Matthew Specktor", "cover": "images/covers/the-golden-hour.jpg", "link": "" },
+    { "title": "The Icon & The Idealist", "author": "Stephanie Gorton", "cover": "images/covers/the-icon-and-the-idealist.jpg", "link": "" },
+    { "title": "Invisible Labor", "author": "Rachel Somerstein", "cover": "images/covers/invisible-labor.jpg", "link": "" },
+    { "title": "Nina Simone and the World She Made", "author": "Salamishah Tillet", "cover": "images/covers/nina-simone.jpg", "link": "" }
   ],
   "writing": [
     { "title": "What Comes After", "publication": "Gulf Coast", "year": 2024, "link": "https://gulfcoastmag.org/stories/what-comes-after,4611?" },

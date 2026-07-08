@@ -82,15 +82,12 @@ looks like this:
 {
   "title": "Evil Genius",
   "author": "Claire Oshetsky",
-  "category": "Novel",
   "cover": "images/covers/evil-genius.jpg",
   "link": ""
 }
 ```
 
 - **title / author** — the book's details.
-- **category** — a short label under the author, e.g. `Novel`, `Stories`,
-  `Poems`, `Memoir`, `Nonfiction`. Leave as `""` to show nothing.
 - **cover** — the path to the cover image (see below).
 - **link** — an optional web address (e.g. the publisher's page). Leave it as
   `""` if there isn't one; the cover just won't be clickable.
