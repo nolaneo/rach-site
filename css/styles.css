@@ -46,6 +46,40 @@ html, body { -webkit-font-smoothing: antialiased; }
 }
 .nav-link:hover::after { transform: scaleX(1); }
 
+/* Floating bottom section-nav: hidden until scrolled past the hero */
+#section-nav {
+  opacity: 0;
+  transform: translateY(140%);
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+#section-nav.nav-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  #section-nav { transition: opacity 0.2s ease; transform: none; }
+}
+
+/* In-page section nav — tabs read as links via a persistent underline
+   (same affordance as the story links); the current section is slate-blue. */
+.section-link {
+  display: inline-block;
+  color: var(--ink, #1B2530);
+  text-decoration: underline;
+  text-decoration-color: var(--line, #CDD8E1);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+.section-link:hover {
+  color: var(--accent, #3C5A78);
+  text-decoration-color: var(--accent, #3C5A78);
+}
+.section-link.is-active {
+  color: var(--accent, #3C5A78);
+  text-decoration-color: var(--accent, #3C5A78);
+}
+
 /* Section headings */
 .section-title {
   font-family: 'Fraunces', Georgia, serif;

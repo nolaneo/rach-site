@@ -1,7 +1,8 @@
 name: Deploy to GitHub Pages
 
 # Publishes the site whenever content is pushed to the main branch.
-# It's a static site (no build step), so we just upload the files as-is.
+# build.py renders index.html from content.json + template.html, then we
+# upload the folder as a static site.
 
 on:
   push:
@@ -28,6 +29,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Build index.html from content.json
+        run: python3 build.py # Python 3 is preinstalled on ubuntu-latest; no deps
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -3,8 +3,9 @@
 Hi! This guide explains how to update your site without needing any technical
 tools. Everything you'll normally change lives in **one file: `content.json`**.
 
-When you save a change, the site rebuilds itself automatically and goes live in
-about a minute.
+When you save a change, GitHub automatically rebuilds the site and it goes live
+in about a minute. (Behind the scenes a small script turns `content.json` into
+the finished page — you never have to touch that. Just edit `content.json`.)
 
 ---
 
