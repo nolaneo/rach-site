@@ -94,6 +94,9 @@ html, body { -webkit-font-smoothing: antialiased; }
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--line);
 }
+/* The last row sits just above a section rule / footer border — drop its own
+   border so the two lines don't double up. */
+.writing-row:last-child { border-bottom: none; }
 
 /* Clickable story titles: clear, stable affordance (no layout shift) */
 .writing-link {
